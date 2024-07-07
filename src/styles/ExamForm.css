@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #71d1ee;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .exam-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exam-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #formFile {
+    display: block;
+    margin: 20px auto;
+  }
+  
+  #formList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #formList li {
+    margin: 10px 0;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  #examForm {
+    margin-top: 20px;
+  }
+  
+  .fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .legend {
+    font-size: 16px;
+    font-weight: bold;
+    color: blueviolet;
+    padding: 0 5px;
+  }
+  
+  .input-group {
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input[type="text"],
+  .input-group input[type="radio"] {
+    margin-bottom: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-group input[type="radio"] {
+    margin-left: 5px;
+  }
+  
+  .input-group .radio-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .input-group .radio-group label {
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+  .question-fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .question-fieldset legend {
+    font-size: 16px;
+    font-weight: bold;
+    color: blueviolet;
+    margin-bottom: 10px;
+  }
+  
+  .question-wrapper {
+    margin-bottom: 10px;
+  }
+  
+  .answer-wrapper {
+    margin-left: 20px; /* Adjust spacing between radio buttons and labels */
+    display: block; /* Ensure answers start on a new line */
+  }
+  .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .close-form-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .exam-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cubes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .cube {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  .question-fieldset {
+    margin-top: 20px;
+  }
+  
+  .question-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .answer-wrapper {
+    margin-top: 10px;
+  }
+  
+  #timerContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  /* ExamForm.css */
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .username {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .question-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cubes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .question-cube {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    cursor: pointer;
+  }
+  
+  .question-cube.active {
+    border-color: blue;
+  }
+  
+  .question-container {
+    margin-bottom: 1rem;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  

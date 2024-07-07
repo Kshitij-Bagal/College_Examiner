@@ -1,0 +1,85 @@
+/* NavBar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E3DFFD;
+  padding: 10px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  width: 80px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items ul li {
+  margin-right: 10px;
+
+}
+
+.nav-items ul li:last-child {
+  margin-right: 0;
+}
+
+.nav-items ul li a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-items ul li a:hover {
+  text-decoration: underline;
+}
+
+.navbar-user {
+  margin-right: 10px;
+}
+
+.navbar-user span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.navbar-login {
+  color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.navbar-login:hover {
+  background-color: #DDD;
+}

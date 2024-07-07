@@ -1,0 +1,144 @@
+/* formbuilder.css */
+
+/* Reset default margin and padding and set background color */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E3DFFD;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Main container for form builder and preview */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 1% 5% 0% 5%;
+}
+
+/* Styling for form builder and form preview areas */
+.form-builder,
+.form-preview {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 45%; /* Adjusted width to fit layout */
+}
+
+.form-builder {
+  margin-right: 5%; /* Adjusted margin to provide space */
+}
+
+.form-preview {
+  overflow-y: auto; /* Enable scrolling if content exceeds container height */
+  max-height: 80vh; /* Limit max height for preview */
+}
+
+/* Styling for headings in form builder and form preview */
+.form-builder h2,
+.form-preview h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for controls section in form builder */
+.form-builder .controls {
+  margin-bottom: 20px;
+}
+
+/* Styling for buttons in form builder */
+.form-builder button {
+  margin: 10px 10px;
+  padding: 5px 10px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-builder button:hover {
+  background-color: darkviolet;
+}
+
+/* Styling for fieldsets */
+.fieldset {
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* Added border to distinguish fieldsets */
+  padding: 15px;
+}
+
+/* Styling for legend text */
+.legend {
+  font-size: 16px;
+  font-weight: bold;
+  color: blueviolet;
+}
+
+/* Styling for input groups */
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="radio"] {
+  margin-bottom: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.radio_group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.radio_group_preview {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  gap: 20px; /* Adjust the gap between radio and input */
+}
+
+.option_group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input-group input[type="radio"] {
+  margin-left: 5px;
+  width: 20px; /* Adjusted width */
+}
+
+.input-group input[type="text"] {
+  width: 250px;
+}
+.option_group input[type="radio"] {
+  margin-left: 5px;
+  width: 20px; /* Adjusted width */
+}
+
+.option_group input[type="text"] {
+  width: 250px;
+}
+.radio_group_in_exam{
+  display: flex;
+}
+.radio_group_in_exam input[type="radio"] {
+  margin-left: 5px;
+  width: 20px; /* Adjusted width */
+}
+
+.label_in_radio {
+  width: 250px;display: block;
+}

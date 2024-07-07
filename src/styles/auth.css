@@ -1,0 +1,226 @@
+.L-R {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  width: 40%;
+
+}
+main{
+  display: flex;
+  height: 600px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;  
+}
+.cover_div {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  perspective: 1000px; 
+}
+
+ .flip .front {
+  transform: rotateY(-180deg);
+}
+
+.flip .back {
+  transform: rotateY(0deg);
+}
+
+.login_div, .register_div {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden; 
+  transition: transform 0.1s;
+}
+
+.login_div.back, .register_div.back {
+  transform: rotateY(180deg);
+}
+
+.decorative {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+}
+/* styles/auth.css */
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+.input-container input:focus {
+  border-color: #7b00ff;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.floating-label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: 0.3s ease all;
+  pointer-events: none;
+  color: #999;
+}
+
+input:focus + .floating-label,
+input:valid + .floating-label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #333;
+}
+
+.auth_button {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth_button:hover {
+  background-color: darkviolet;
+  transition: background-color 0.3s ease;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+p button {
+  background: none;
+  border: none;
+  color: blueviolet;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.registerCollege{
+  width: 300px;
+}
+/* .input-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.input-container input {
+  width: 100%;
+  margin: 12px 12px 12px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+
+
+.decorative h1 {
+  margin-bottom: 20px;
+}
+fieldset{
+  position: relative;
+  border: 0;
+  padding-top: 12px;
+}
+legend{
+  text-transform: uppercase;
+  color: rgb(48, 3, 90);
+  font-size: 18px;
+  font-weight: 100;
+  padding-left: 18px;
+}
+fieldset div{
+  position: relative;
+}
+input, button{
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 45px;
+  font-size: 16px;
+  border: Irgb(244, 196, 255) 1px solid;
+  outline: 0;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  }
+  input{
+  padding-left: 13px;
+  color: #777;
+
+  }
+  .auth_button {
+  width: 90%;
+  margin-bottom: 22px;
+  border-radius: 28px;
+  text-transform: uppercase;
+  background-color: blueviolet;
+  color: #fcfcfc;
+  }
+  .auth_button:hover{
+  opacity: .7;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;  
+  box-shadow: rgba(248, 17, 229, 0.664) 5px 5px, rgba(128, 9, 9, 0.3) 10px 10px, rgba(113, 101, 226, 0.2) 15px 15px, rgba(129, 230, 154, 0.1) 20px 20px, rgba(206, 219, 146, 0.05) 25px 25px;
+} */
+
+/* div span{
+  position: absolute;
+  top: 24px;
+  left: 38px; 
+  color: #999;
+  pointer-events: none;
+  transition: .5s;
+  }
+  input:valid~span, input:focus~span{
+  top: -4px;
+  font-size: 11px;
+  color: rgb(54, 1, 70);
+}
+input:valid{
+  border-bottom: 1.5 rgb(255, 21, 204) solid;
+  left: 18px;
+}
+p{
+  font-size: 13px;
+  padding-left:  12px; 
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+p a{
+  text-decoration: none;
+  font-weight: 800;
+}  */
