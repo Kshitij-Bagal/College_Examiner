@@ -1,5 +1,5 @@
 // fieldset.js
-import addToPreview from './AddToPreview'; // Import addToPreview function
+import addToPreview from './AddToPreview'; 
 
 export const createFieldset = (legendText) => {
   const fieldset = document.createElement('fieldset');
@@ -13,7 +13,7 @@ export const createFieldset = (legendText) => {
 export const addPreviewButtonListener = (fieldset) => {
   const addButton = fieldset.querySelector('.add-to-preview');
   addButton.addEventListener('click', () => {
-    addToPreview(fieldset); // Call addToPreview function with fieldset
+    addToPreview(fieldset); 
     addButton.remove();
   });
 };

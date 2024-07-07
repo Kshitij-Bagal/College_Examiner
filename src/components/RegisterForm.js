@@ -1,6 +1,6 @@
 // RegisterForm.js
 import React from 'react';
-import '../styles/auth.css'; // Import your CSS file here
+import '../styles/auth.css'; 
 
 const RegisterForm = ({ onOpenLogin, onRegister }) => {
   const handleSubmit = (e) => {

@@ -1,6 +1,5 @@
 /* formbuilder.css */
 
-/* Reset default margin and padding and set background color */
 body {
   font-family: Arial, sans-serif;
   background-color: #E3DFFD;
@@ -9,7 +8,6 @@ body {
   min-height: 100vh;
 }
 
-/* Main container for form builder and preview */
 .container {
   display: flex;
   justify-content: space-between;
@@ -18,38 +16,34 @@ body {
   margin: 1% 5% 0% 5%;
 }
 
-/* Styling for form builder and form preview areas */
 .form-builder,
 .form-preview {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 45%; /* Adjusted width to fit layout */
+  width: 45%; 
 }
 
 .form-builder {
-  margin-right: 5%; /* Adjusted margin to provide space */
+  margin-right: 5%;
 }
 
 .form-preview {
-  overflow-y: auto; /* Enable scrolling if content exceeds container height */
-  max-height: 80vh; /* Limit max height for preview */
+  overflow-y: auto; 
+  max-height: 80vh;
 }
 
-/* Styling for headings in form builder and form preview */
 .form-builder h2,
 .form-preview h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Styling for controls section in form builder */
 .form-builder .controls {
   margin-bottom: 20px;
 }
 
-/* Styling for buttons in form builder */
 .form-builder button {
   margin: 10px 10px;
   padding: 5px 10px;
@@ -64,21 +58,19 @@ body {
   background-color: darkviolet;
 }
 
-/* Styling for fieldsets */
 .fieldset {
   margin-bottom: 20px;
-  border: 1px solid #ccc; /* Added border to distinguish fieldsets */
+  border: 1px solid #ccc; 
   padding: 15px;
 }
 
-/* Styling for legend text */
+
 .legend {
   font-size: 16px;
   font-weight: bold;
   color: blueviolet;
 }
 
-/* Styling for input groups */
 .input-group {
   margin-bottom: 10px;
 }
@@ -106,7 +98,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items:flex-start;
-  gap: 20px; /* Adjust the gap between radio and input */
+  gap: 20px;
 }
 
 .option_group {
@@ -117,7 +109,7 @@ body {
 
 .input-group input[type="radio"] {
   margin-left: 5px;
-  width: 20px; /* Adjusted width */
+  width: 20px;
 }
 
 .input-group input[type="text"] {
@@ -125,7 +117,7 @@ body {
 }
 .option_group input[type="radio"] {
   margin-left: 5px;
-  width: 20px; /* Adjusted width */
+  width: 20px;
 }
 
 .option_group input[type="text"] {
@@ -136,7 +128,7 @@ body {
 }
 .radio_group_in_exam input[type="radio"] {
   margin-left: 5px;
-  width: 20px; /* Adjusted width */
+  width: 20px; 
 }
 
 .label_in_radio {

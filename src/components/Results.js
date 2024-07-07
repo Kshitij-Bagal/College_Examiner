@@ -11,7 +11,7 @@ const Results = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [answerKey, setAnswerKey] = useState({});
   const [results, setResults] = useState({});
-  const [modalView, setModalView] = useState('answerKey'); // 'answerKey' or 'results'
+  const [modalView, setModalView] = useState('answerKey');
 
   useEffect(() => {
     if (user.username) {
@@ -57,7 +57,6 @@ const Results = () => {
 
   const handleSaveAnswerKey = async (formId, updatedAnswerKey) => {
     try {
-      // Update AnswerKey in Forms table
       await base('Forms').update([
         {
           id: formId,
@@ -67,18 +66,14 @@ const Results = () => {
         },
       ]);
 
-      // Fetch form name to find related answers
       const formRecord = await base('Forms').find(formId);
       const formName = formRecord.fields.FormName;
 
-      // Fetch answers for this form
       const answerRecords = await base('Answers').select({
         filterByFormula: `{FormName} = '${formName}'`,
       }).all();
 
-      // Update AnswerKey and calculate results for each student
       for (const record of answerRecords) {
-        // Parse studentAnswers correctly
         const studentAnswers = JSON.parse(record.fields.Answer);
 
         console.log(`Student answers for ${record.fields.UserName}:`, studentAnswers);
@@ -90,15 +85,13 @@ const Results = () => {
 
         Object.keys(updatedAnswerKey).forEach(questionIndex => {
           totalQuestions += 1;
-          const questionId = parseInt(questionIndex); // Convert questionIndex to integer
+          const questionId = parseInt(questionIndex); 
 
-          // Compare student's answer with answer key
           const studentAnswer = answers[questionIndex]?.answer || '';
           const correctAnswer = updatedAnswerKey[questionIndex]?.answer || '';
 
           console.log(`Comparing student's answer (${studentAnswer}) with correct answer (${correctAnswer})`);
 
-          // Convert both answers to lowercase for case-insensitive comparison
           if (studentAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
             score += 1;
             console.log('Correct!');
@@ -109,20 +102,19 @@ const Results = () => {
 
         const percentage = (score / totalQuestions) * 100;
 
-        // Update Result in Answers table
         await base('Answers').update([
           {
             id: record.id,
             fields: {
               AnswerKey: JSON.stringify(updatedAnswerKey),
-              Result: percentage.toFixed(2), // Store the calculated percentage score
+              Result: percentage.toFixed(2), 
             },
           },
         ]);
       }
 
       alert('Answer key and results saved successfully.');
-      fetchForms(); // Refresh forms to update the answer key
+      fetchForms(); 
     } catch (error) {
       console.error('Error saving answer key and results:', error);
       alert('Failed to save the answer key and results.');
@@ -179,7 +171,7 @@ const Results = () => {
           isOpen={isModalOpen}
           onRequestClose={closeModal}
           contentLabel="Form Modal"
-          ariaHideApp={false} // Add this line to prevent the React-Modal error
+          ariaHideApp={false} 
         >
           {modalView === 'answerKey' ? (
             <AnswerKeyModal form={selectedForm} answerKey={answerKey} setAnswerKey={setAnswerKey} handleSaveAnswerKey={handleSaveAnswerKey} closeModal={closeModal} />

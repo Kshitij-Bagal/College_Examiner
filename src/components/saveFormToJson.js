@@ -36,7 +36,6 @@ const SaveFormToJson = () => {
           answers.push(label.textContent.trim());
         });
       }
-
       formData.formData.push({
         type: legend,
         question: questionText,
@@ -44,16 +43,8 @@ const SaveFormToJson = () => {
       });
     });
 
-    // Convert formData to JSON string
     const jsonData = JSON.stringify(formData, null, 2);
-    console.log(jsonData); // Display JSON data in console (replace with your desired handling)
+    console.log(jsonData); 
   };
-
-  // return (
-  //   <div>
-  //     <button onClick={convertFormDataToJson}>Convert to JSON</button>
-  //   </div>
-  // );
 };
-
 export default SaveFormToJson;

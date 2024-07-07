@@ -1,11 +1,10 @@
 // addShortAnswerQuestion.js
 
-import { createFieldset, addPreviewButtonListener } from './fieldset'; // Import necessary functions from fieldset.js
+import { createFieldset, addPreviewButtonListener } from './fieldset'; 
 
 const addShortAnswerQuestion = (builderAreaRef, addToPreview) => {
-  const fieldset = createFieldset('Short Answer'); // Create fieldset with legend text
+  const fieldset = createFieldset('Short Answer'); 
 
-  // Create elements for question and answer inputs
   const questionInputGroup = document.createElement('div');
   questionInputGroup.className = 'input-group';
   questionInputGroup.innerHTML = `
@@ -20,11 +19,9 @@ const addShortAnswerQuestion = (builderAreaRef, addToPreview) => {
     <input type="text" placeholder="Answer">
   `;
 
-  // Append elements to fieldset
   fieldset.appendChild(questionInputGroup);
   fieldset.appendChild(answerInputGroup);
 
-  // Create "Add to Preview" button
   const addButton = document.createElement('button');
   addButton.className = 'add-to-preview';
   addButton.textContent = 'Add to Preview';
@@ -33,10 +30,10 @@ const addShortAnswerQuestion = (builderAreaRef, addToPreview) => {
     addButton.remove();
   });
 
-  fieldset.appendChild(addButton); // Append button to fieldset
+  fieldset.appendChild(addButton);
 
-  builderAreaRef.current.appendChild(fieldset); // Append fieldset to builderAreaRef
-  addPreviewButtonListener(fieldset, addToPreview); // Attach preview button listener
+  builderAreaRef.current.appendChild(fieldset); 
+  addPreviewButtonListener(fieldset, addToPreview); 
 };
 
 export default addShortAnswerQuestion;

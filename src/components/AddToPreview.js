@@ -16,7 +16,7 @@ const addToPreview = (fieldset) => {
 
   const previewFieldset = document.createElement('fieldset');
   previewFieldset.className = 'fieldset';
-  previewFieldset.dataset.type = legend; // Use dataset to store type
+  previewFieldset.dataset.type = legend; 
   previewFieldset.innerHTML = `
     <legend class="legend">${legend}</legend>
     <label>${questionText}</label>

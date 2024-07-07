@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 
 const AnswerKeyModal = ({ isOpen, onRequestClose, form, answerKeyData, handleSaveAnswerKey }) => {
-  const [answerKey, setAnswerKey] = useState(answerKeyData); // Initialize with answerKeyData from props
+  const [answerKey, setAnswerKey] = useState(answerKeyData); 
 
   useEffect(() => {
-    setAnswerKey(answerKeyData); // Update answerKey state when answerKeyData changes
+    setAnswerKey(answerKeyData);
   }, [answerKeyData]);
-  console.log('AnswerKeyModal form data:', form); // Debug log
+  console.log('AnswerKeyModal form data:', form); 
   const handleAnswerChange = (questionIndex, answer) => {
     setAnswerKey(prevKey => ({
       ...prevKey,

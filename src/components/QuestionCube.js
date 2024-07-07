@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../styles/QuestionCube.css';
+
 
 const QuestionCube = ({ index, isActive, isAnswered, onClick, isAnsweredColor }) => {
   return (

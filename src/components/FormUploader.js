@@ -13,14 +13,13 @@ const FormUploader = ({ setFormData }) => {
   const fetchForms = async () => {
     try {
       const records = await base('Forms').select({
-        filterByFormula: '{Publish} = TRUE()', // Only fetch forms where Publish is true
+        filterByFormula: '{Publish} = TRUE()',
       }).all();
 
       const formattedForms = records.map(record => ({
         id: record.id,
         formName: record.fields.FormName,
         formData:  record.fields.FormData
-        // formData: Array.isArray(record.fields.FormData) ? record.fields.FormData : [] // Ensure formData is always an array
       }));
 
       setFormList(formattedForms);
@@ -34,7 +33,6 @@ const FormUploader = ({ setFormData }) => {
     setFormData({
       ...formData,
       formData:  formData.FormData
-      // formData: Array.isArray(formData.formData) ? formData.formData : [] // Ensure formData is always an array
     });    console.log('Selected form data:', formData);
     console.log('Selected form data.formData:', formData.formData);
   };

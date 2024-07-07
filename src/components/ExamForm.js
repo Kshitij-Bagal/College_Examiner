@@ -2,11 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import QuestionCube from './QuestionCube';
 import Timer from './Timer';
 import base from './airtableConfig';
-import { useUser } from '../utils/UserContext'; // Import the UserContext
+import { useUser } from '../utils/UserContext'; 
 import '../styles/ExamForm.css';
 
 const ExamForm = ({ location }) => {
-  const { userName, userRole, college, batch } = useUser() || {}; // Destructure user info from UserContext
+  const { userName, userRole, college, batch } = useUser() || {};
   const [formList, setFormList] = useState([]);
   const [formData, setFormData] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -19,19 +19,17 @@ const ExamForm = ({ location }) => {
     if (userRole) {
       fetchForms();
     }
-  }, [userRole, college, batch]); // Fetch forms when user info is available
+  }, [userRole, college, batch]); 
 
   const fetchForms = async () => {
     try {
       let records;
 
       if (userRole === 'Admin' || userRole === 'Teacher') {
-        // Fetch all forms for Admins and Teachers
         records = await base('Forms').select({
           filterByFormula: '{Publish} = TRUE()',
         }).all();
       } else {
-        // Fetch forms based on college and batch for Students
         records = await base('Forms').select({
           filterByFormula: `AND({Publish} = TRUE(), {College} = '${college}', FIND('${batch}', {Batch}) > 0)`,
         }).all();
@@ -89,7 +87,7 @@ const ExamForm = ({ location }) => {
       }
       nextIndex++;
     }
-    return currentIndex; // If no next active question found, stay on current question
+    return currentIndex;
   };
 
   const handleFormSubmit = async () => {
@@ -146,7 +144,7 @@ const ExamForm = ({ location }) => {
   }
 
   if (!formData.formData || !formData.formData.length) {
-    return <p>No questions found.</p>; // Handle case where formData is empty or not properly loaded
+    return <p>No questions found.</p>; 
   }
 
   const question = formData?.formData[currentQuestionIndex];

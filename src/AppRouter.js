@@ -1,3 +1,4 @@
+// AppRouter.js
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import AuthPage from './components/AuthPage';
@@ -7,7 +8,7 @@ import ExamForm from './components/ExamForm';
 import Results from './components/Results';
 import FormBuilder from './components/FormBuilder';
 import Airtable from 'airtable';
-import Callback from './components/Callback'; // Correct import
+import Callback from './components/Callback'; 
 
 const base = new Airtable({ apiKey: 'patmR9viVXmX3PJAw.71eebdadd0da2fb125650748e7e07b574b6d1a90643cb2f0baade97c33cf4c86' }).base('appmyBUPyd7QLQcwp');
 
@@ -53,7 +54,7 @@ const AppRouter = () => {
     setIsLoggedIn(false);
     setUsername('');
     setUserRole('');
-    window.location.reload(); // Reload the page after logout
+    window.location.reload();
   };
 
   return (

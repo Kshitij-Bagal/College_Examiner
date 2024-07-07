@@ -2,7 +2,7 @@
 const uploadToDropbox = async (accessToken, formName, formData) => {
   const url = 'https://content.dropboxapi.com/2/files/upload';
   const fileName = `${formName}.json`;
-  const fileContent = JSON.stringify(formData); // Ensure this is correctly set to formData
+  const fileContent = JSON.stringify(formData); 
   const args = {
     path: `/${fileName}`,
     mode: 'overwrite',
@@ -11,9 +11,9 @@ const uploadToDropbox = async (accessToken, formName, formData) => {
     strict_conflict: false
   };
 
-  console.log('Access Token:', accessToken); // Log the access token
-  console.log('File Content:', fileContent); // Log the file content
-  console.log('Dropbox API Args:', args); // Log the Dropbox API arguments
+  console.log('Access Token:', accessToken); 
+  console.log('File Content:', fileContent); 
+  console.log('Dropbox API Args:', args); 
 
   try {
     const response = await fetch(url, {
@@ -33,9 +33,8 @@ const uploadToDropbox = async (accessToken, formName, formData) => {
     }
 
     const data = await response.json();
-    console.log('File uploaded successfully:', data); // Log successful upload data
+    console.log('File uploaded successfully:', data); 
 
-    // Create shared link
     const sharedLinkResponse = await fetch('https://api.dropboxapi.com/2/sharing/create_shared_link_with_settings', {
       method: 'POST',
       headers: {
@@ -55,7 +54,7 @@ const uploadToDropbox = async (accessToken, formName, formData) => {
     }
 
     const sharedLinkData = await sharedLinkResponse.json();
-    console.log('Shared link created successfully:', sharedLinkData); // Log successful shared link data
+    console.log('Shared link created successfully:', sharedLinkData); 
     return sharedLinkData.url;
 
   } catch (error) {

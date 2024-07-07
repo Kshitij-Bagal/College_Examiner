@@ -105,8 +105,8 @@ body {
   }
   
   .answer-wrapper {
-    margin-left: 20px; /* Adjust spacing between radio buttons and labels */
-    display: block; /* Ensure answers start on a new line */
+    margin-left: 20px; 
+    display: block; 
   }
   .title-wrapper {
     display: flex;

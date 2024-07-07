@@ -14,7 +14,6 @@ const UserProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    // Fetch user data from Airtable based on username
     const base = new Airtable({ apiKey: 'patmR9viVXmX3PJAw.71eebdadd0da2fb125650748e7e07b574b6d1a90643cb2f0baade97c33cf4c86' }).base('appmyBUPyd7QLQcwp');
     const username = localStorage.getItem('username');
     base('Users').select({
@@ -47,34 +46,3 @@ const UserProvider = ({ children }) => {
 const useUser = () => useContext(UserContext);
 
 export { UserProvider, useUser };
-
-
-
-
-
-
-
-
-
-// {
-// "username": "Onkar Zare",
-//   "name": "travia",
-//   "answers": {
-//     "0": {
-//       "question": "Who is the current President of the India?",
-//       "answer": "modi"
-//     },
-//     "1": {
-//       "question": "What is the capital of France?",
-//       "answer": "Paris"
-//     },
-//     "2": {
-//       "question": "The Great Wall of China is visible from space.",
-//       "answer": "True"
-//     },
-//     "3": {
-//       "question": "Name the largest planet in our solar system.",
-//       "answer": "Jupiter"
-//     }
-//   }
-// }

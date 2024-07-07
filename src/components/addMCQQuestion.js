@@ -1,11 +1,10 @@
 // addMCQQuestion.js
 
-import { createFieldset, addPreviewButtonListener } from './fieldset'; // Import necessary functions from fieldset.js
+import { createFieldset, addPreviewButtonListener } from './fieldset'; 
 
 const addMCQQuestion = (builderAreaRef, addToPreview) => {
-  const fieldset = createFieldset('Multiple Choice'); // Create fieldset with legend text
+  const fieldset = createFieldset('Multiple Choice'); 
 
-  // Create elements for question and options
   const questionInputGroup = document.createElement('div');
   questionInputGroup.className = 'input-group';
   questionInputGroup.innerHTML = `
@@ -31,11 +30,9 @@ const addMCQQuestion = (builderAreaRef, addToPreview) => {
     </div>
   `;
 
-  // Append elements to fieldset
   fieldset.appendChild(questionInputGroup);
   fieldset.appendChild(optionsInputGroup);
 
-  // Create "Add to Preview" button
   const addButton = document.createElement('button');
   addButton.className = 'add-to-preview';
   addButton.textContent = 'Add to Preview';
@@ -44,10 +41,10 @@ const addMCQQuestion = (builderAreaRef, addToPreview) => {
     addButton.remove();
   });
 
-  fieldset.appendChild(addButton); // Append button to fieldset
+  fieldset.appendChild(addButton); 
 
-  builderAreaRef.current.appendChild(fieldset); // Append fieldset to builderAreaRef
-  addPreviewButtonListener(fieldset, addToPreview); // Attach preview button listener
+  builderAreaRef.current.appendChild(fieldset); 
+  addPreviewButtonListener(fieldset, addToPreview);
 };
 
 export default addMCQQuestion;

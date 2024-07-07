@@ -20,7 +20,6 @@ export const login = async (email, password) => {
     }
   };
   
-  // Function to handle user signup
   export const signup = async (name, email, phone, password) => {
     try {
       const newRecord = await base('Users').create({

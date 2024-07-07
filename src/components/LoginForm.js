@@ -1,6 +1,6 @@
 // LoginForm.js
 import React from 'react';
-import '../styles/auth.css'; // Import your CSS file here
+import '../styles/auth.css'; 
 
 const LoginForm = ({ onOpenRegister, onLogin }) => {
   const handleSubmit = (e) => {
